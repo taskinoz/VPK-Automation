@@ -7,6 +7,6 @@
 
 cp ./dir/englishclient_mp_common.bsp.pak000_dir.vpk ./ & cp -R ./common ./englishclient_mp_common.bsp.pak000_dir
 wait
-RSPNVPK englishclient_mp_common.bsp.pak000_dir.vpk -s
+./RSPNVPK englishclient_mp_common.bsp.pak000_dir.vpk -s
 wait
 rm -rf ./englishclient_mp_common.bsp.pak000_dir
