@@ -36,7 +36,6 @@ jobs:
           ls ./
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
-        uses: einaregilsson/build-number@v1
         with:
           artifacts: "VPK.zip"
           body: "test"
