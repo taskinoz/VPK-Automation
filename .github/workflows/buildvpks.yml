@@ -36,8 +36,9 @@ jobs:
           ls ./
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
+        uses: einaregilsson/build-number@v1
         with:
           artifacts: "VPK.zip"
           body: "test"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{curl -s https://api.github.com/repos/taskinoz/VPK-Automation/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/' + 1}}
+          tag: ${{ github.run_number }}
