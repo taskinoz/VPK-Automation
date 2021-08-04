@@ -38,6 +38,7 @@ jobs:
           tar -xf linux-x64.tar.gz
           sh build.sh prod
           ls ./
+      - name: Push release
         with:
           artifacts: "vpk.zip"
           body: "test"
