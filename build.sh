@@ -5,7 +5,7 @@
 ## Add the VPK that your editing in a /dir folder
 ## eg. englishclient_frontend.bsp.pak000_dir.vpk
 
-cp ./dir/englishclient_mp_common.bsp.pak000_dir.vpk ./ & cp -R ./common ./englishclient_mp_common.bsp.pak000_dir
+cp ./dir/englishclient_mp_common.bsp.pak000_dir.vpk ./ & cp -R ./src ./englishclient_mp_common.bsp.pak000_dir
 wait
 ./RSPNVPK englishclient_mp_common.bsp.pak000_dir.vpk -s
 wait
