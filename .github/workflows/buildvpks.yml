@@ -37,7 +37,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
         with:
-          artifacts: "vpk.zip"
+          artifacts: "VPK.zip"
           body: "test"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: 1.0.0
