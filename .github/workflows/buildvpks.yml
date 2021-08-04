@@ -24,7 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: ncipollo/release-actions@v1
+      - name: Create Release
+        uses: ncipollo/release-action@v1.8.6
         with:
           artifacts: "vpk.zip"
           body: "test"
