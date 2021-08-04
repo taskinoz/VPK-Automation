@@ -38,6 +38,6 @@ jobs:
         uses: ncipollo/release-action@v1.8.6
         with:
           artifacts: "VPK.zip"
-          body: "${{build.md}}"
+          bodyfile: "build.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "${{build.txt}}"
+          tagfile: "build.txt"
