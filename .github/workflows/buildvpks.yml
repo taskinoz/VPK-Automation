@@ -40,4 +40,4 @@ jobs:
           artifacts: "VPK.zip"
           body: "test"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: 1.0.0
+          tag: ${{curl -s https://api.github.com/repos/taskinoz/VPK-Automation/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/' + 1}}
