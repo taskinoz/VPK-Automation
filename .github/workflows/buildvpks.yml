@@ -24,12 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Create Release
-        uses: ncipollo/release-action@v1.8.6
-        with:
-          artifacts: "vpk.zip"
-          body: "test"
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -40,3 +34,10 @@ jobs:
           tar -xf linux-x64.tar.gz
           sh build.sh prod
           ls ./
+      - name: Create Release
+        uses: ncipollo/release-action@v1.8.6
+        with:
+          artifacts: "vpk.zip"
+          body: "test"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: 1.0.0
