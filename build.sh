@@ -13,6 +13,7 @@ then
   ./RSPNVPK englishclient_mp_common.bsp.pak000_dir.vpk -s
   wait
   rm -rf ./englishclient_mp_common.bsp.pak000_dir
+  zip VPK.zip ./*.vpk
 else
   ## Run on Dev
   cp ./dir/englishclient_mp_common.bsp.pak000_dir.vpk ./ & cp -R ./common ./englishclient_mp_common.bsp.pak000_dir
