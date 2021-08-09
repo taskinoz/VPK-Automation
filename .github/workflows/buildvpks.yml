@@ -39,9 +39,11 @@ jobs:
           ls ./
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
+      - name: Dotenv Action
+        uses: falti/dotenv-action@v0.2.6
         with:
           artifacts: "VPK.zip"
           bodyfile: "build.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: ${{ env.NAME }}
-          tag: ${{ env.VERSION }}
+          name: ${{ steps.dotenv.outputs.name }}
+          tag: ${{ steps.dotenv.outputs.version }}
