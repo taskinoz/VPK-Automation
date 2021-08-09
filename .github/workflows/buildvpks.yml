@@ -41,9 +41,7 @@ jobs:
         uses: ncipollo/release-action@v1.8.6
       - name: Dotenv Action
         uses: falti/dotenv-action@v0.2.6
-        id: dotenv
-        uses: ./.github/actions/dotenv-action
-        
+        id: dotenv        
         with:
           artifacts: "VPK.zip"
           bodyfile: "build.md"
