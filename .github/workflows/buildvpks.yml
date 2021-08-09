@@ -43,5 +43,5 @@ jobs:
           artifacts: "VPK.zip"
           bodyfile: "build.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: ${{ github.ref }}
-          tag: ${{ github.ref }}
+          name: ${{ env.NAME }}
+          tag: ${{ env.VERSION }}
