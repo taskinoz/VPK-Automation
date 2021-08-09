@@ -39,8 +39,6 @@ jobs:
           ls ./
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
-      - name: Dotenv Action
-        uses: falti/dotenv-action@v0.2.6
         with:
           id: dotenv
           uses: ./.github/actions/dotenv-action
