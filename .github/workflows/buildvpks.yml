@@ -32,18 +32,16 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt install wget zip
-          wget http://titanfall.taskinoz.com/dir/englishclient_mp_common.bsp.pak000_dir.vpk
-          wget http://titanfall.taskinoz.com/dir/linux-x64.tar.gz
+          wget ${{ secrets.LOCATIONS }}/dir/englishclient_mp_common.bsp.pak000_dir.vpk
+          wget ${{ secrets.LOCATIONS }}/dir/linux-x64.tar.gz
           tar -xf linux-x64.tar.gz
           sh build.sh prod
           ls ./
       - name: Create Release
         uses: ncipollo/release-action@v1.8.6
         with:
-          id: dotenv
-          uses: ./.github/actions/dotenv-action
           artifacts: "VPK.zip"
           bodyfile: "build.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: ${{ steps.dotenv.outputs.name }}
-          tag: ${{ steps.dotenv.outputs.version }}
+          name: Build Draft
+          tag: ${{ github.run_number }}
