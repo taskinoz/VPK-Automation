@@ -44,4 +44,5 @@ jobs:
           bodyfile: "build.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Build Draft
-          tag: ${{ github.run_number }}
+          tag: pre-0.${{ github.run_number }}
+          draft: true
