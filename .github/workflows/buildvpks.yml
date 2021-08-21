@@ -40,7 +40,7 @@ jobs:
         uses: ncipollo/release-action@v1.8.6
         with:
           artifacts: "VPK.zip"
-          bodyfile: "build.md"
+          bodyfile: "changelog.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Build Draft
           tag: pre-0.${{ github.run_number }}
