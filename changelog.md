@@ -1,6 +1,3 @@
-Updated the workflow to run when this file is updated
-
-- Changed workflow
-- Updated readme
+Changed the RSPNVPK zip on the backend since it wasnt running properly
 
 **These changes can be seen in the changelog.md**
